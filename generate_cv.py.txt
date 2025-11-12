@@ -1,0 +1,119 @@
+cat > generate_cv.py << 'EOF'
+#!/usr/bin/env python3
+"""
+Simple CV Generator for Arseniy Kaurdakou
+"""
+
+def create_cv():
+    html = """<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Arseniy Kaurdakou - CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .cv-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+            margin-top: 25px;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .skill {
+            background: #ecf0f1;
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid #bdc3c7;
+        }
+        .highlight {
+            background: #e8f4fc;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border-left: 4px solid #2980b9;
+        }
+        .contact {
+            text-align: center;
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .contact a {
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <h1>Arseniy Kaurdakou</h1>
+        <p style="text-align: center; color: #7f8c8d;">Student & Aspiring Professional</p>
+        
+        <div class="section">
+            <h2>Summary</h2>
+            <p>Motivated student with strong dedication to learning and skill development. Excellent problem-solving abilities and commitment to achieving goals through disciplined practice and teamwork.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill">Swimming</div>
+                <div class="skill">Cooking</div>
+                <div class="skill">Basketball</div>
+                <div class="skill">Painting</div>
+                <div class="skill">Problem Solving</div>
+                <div class="skill">Time Management</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Highlights</h2>
+            <div class="highlight">Successfully balanced academic work with personal skill development</div>
+            <div class="highlight">Demonstrated strong teamwork in sports and group activities</div>
+            <div class="highlight">Achieved personal goals through dedicated practice</div>
+        </div>
+        
+        <div class="contact">
+            <h3>Contact Information</h3>
+            <p>Email: <a href="mailto:Arseniy.kaurdakou@stud.vilniustech.lt">Arseniy.kaurdakou@stud.vilniustech.lt</a></p>
+        </div>
+    </div>
+</body>
+</html>"""
+    
+    # Write to file
+    with open('index.html', 'w') as f:
+        f.write(html)
+    print("✅ CV generated successfully as 'index.html'")
+
+if __name__ == "__main__":
+    create_cv()
+EOF
